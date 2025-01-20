@@ -156,3 +156,104 @@ MPPCB000305
 R44&154pifAn
 36a4d317-582d-4b30-b176-9a0e623770d4
 36a4d317-582d-4b30-b176-9a0e623770d4
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+Traceback (most recent call last):
+  File "/home/sibaram/Downloads/client_side/demo.py", line 17, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+Traceback (most recent call last):
+  File "/home/sibaram/Downloads/client_side/demo.py", line 17, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+Traceback (most recent call last):
+  File "/home/sibaram/Downloads/client_side/demo.py", line 17, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+Traceback (most recent call last):
+  File "/home/sibaram/Downloads/client_side/demo.py", line 17, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+Traceback (most recent call last):
+  File "/home/sibaram/Downloads/client_side/demo.py", line 17, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "/home/sibaram/Downloads/client_side/demo.py", line 17, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "/home/sibaram/Downloads/client_side/demo.py", line 17, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "/home/sibaram/Downloads/client_side/demo.py", line 17, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "/home/sibaram/Downloads/client_side/demo.py", line 17, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "/home/sibaram/Downloads/client_side/demo.py", line 17, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 2
+    cd ~/Downloads/client_side
+       ^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 2
+    cd ~/Downloads/client_side
+       ^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 3
+    source venv/bin/activate
+           ^^^^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 3
+    source venv/bin/activate
+           ^^^^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 5
+    python demo.py
+           ^^^^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 2
+    export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+           ^^^^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 5
+    python demo.py
+           ^^^^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 5
+    python demo.py
+           ^^^^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 5
+    python demo.py
+           ^^^^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 5
+    python demo.py
+           ^^^^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 5
+    python demo.py
+           ^^^^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 5
+    python demo.py
+           ^^^^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 5
+    python demo.py
+           ^^^^
+SyntaxError: invalid syntax
+  File "/home/sibaram/Downloads/client_side/run_script.sh", line 5
+    python demo.py
+           ^^^^
+SyntaxError: invalid syntax

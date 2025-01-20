@@ -212,9 +212,10 @@ def run_script_for_row(mppcb_id, password, secret_key, ambient_id):
     response = requests.post(API_URL, json=payload, headers=headers, verify=False)
 
     # Print the response from the server
+    print(mppcb_id)
     print(response.status_code)
     print(response.json())
-    print(mppcb_id)
+    
 
 # Iterate over each row in the DataFrame and run the script
 for index, row in df.iterrows():

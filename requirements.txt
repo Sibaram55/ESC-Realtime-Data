@@ -6,3 +6,4 @@ ntplib
 python-dotenv
 psycopg2
 pandas
+numpy
