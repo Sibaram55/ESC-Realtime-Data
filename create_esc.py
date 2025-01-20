@@ -117,8 +117,9 @@ url = BASE_URL + USER_REGISTRAION
 response = requests.post(url=url, data=user_registraion_payload, verify=False)
 # print(response.status_code)
 # print(response.json())
-mppcb_id = response.json()['data']['mppcb_id']
-password = response.json()['plain_password']
+json_response = response.json()
+mppcb_id = json_response['data']['mppcb_id']
+password = json_response['plain_password']
 
 # print("ID: ",  mppcb_id)
 # print("Password: ", password)
@@ -126,8 +127,8 @@ login_payload = {
     "mppcb_id":mppcb_id,
     "password":password
 }
-# print("ID: ", mppcb_id)
-# print("Password: ", password)
+print("ID: ", mppcb_id)
+print("Password: ", password)
 url = BASE_URL + LOGIN_ENDPOINT
 requests.post(url=url, data=login_payload, verify=False)
 
@@ -189,10 +190,11 @@ response1 = requests.get(url=url, headers=headers, verify=False)
 
 url = BASE_URL + POST_AMBIENT_DETAILS
 response = requests.get(url=url, verify=False, headers=headers)
-
-# print(response.json())
-
-ambient_id_1 = response.json()["data"]["ambient_data"][0]["id"]
+print("MPPCB IDDDDDDDDDDDDDDDDDDDDDDDDD", mppcb_id)
+print("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP", password)
+print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh", response)
+json_response = response.json()
+ambient_id_1 = json_response["data"]["ambient_data"][0]["id"]
 
 print(ambient_id_1)
 
@@ -355,6 +357,14 @@ def get_timestamp():
     except Exception as e:
         print(f"Error fetching NTP time: {e}")
         return None
+
+# def get_timestamp():
+#     try:
+#         utc_time = datetime.now(timezone.utc)
+#         return utc_time.strftime('%Y-%m-%dT%H:%M:%SZ')
+#     except Exception as e:
+#         print(f"Error fetching system UTC time: {e}")
+#         return None
 
 load_dotenv()
 
