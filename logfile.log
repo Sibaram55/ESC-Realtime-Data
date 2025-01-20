@@ -1,0 +1,158 @@
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+ID:  MPPCB000296
+Password:  2$ey$$0qK4z@
+MPPCB IDDDDDDDDDDDDDDDDDDDDDDDDD MPPCB000296
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP 2$ey$$0qK4z@
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh <Response [200]>
+AMBIENT_STATION_144
+201
+{'message': 'Real-time data saved successfully'}
+AMBIENT_STATION_144
+MPPCB000296
+2$ey$$0qK4z@
+2c18ceb1-3244-4180-ae70-b0823ae704ab
+2c18ceb1-3244-4180-ae70-b0823ae704ab
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+ID:  MPPCB000297
+Password:  5I8aT#N@#IAr
+MPPCB IDDDDDDDDDDDDDDDDDDDDDDDDD MPPCB000297
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP 5I8aT#N@#IAr
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh <Response [200]>
+AMBIENT_STATION_145
+201
+{'message': 'Real-time data saved successfully'}
+AMBIENT_STATION_145
+MPPCB000297
+5I8aT#N@#IAr
+accc9ec9-128b-47a0-8318-9e36c27de74f
+accc9ec9-128b-47a0-8318-9e36c27de74f
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+ID:  MPPCB000298
+Password:  $CpZSONlzx&8
+MPPCB IDDDDDDDDDDDDDDDDDDDDDDDDD MPPCB000298
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP $CpZSONlzx&8
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh <Response [200]>
+AMBIENT_STATION_146
+201
+{'message': 'Real-time data saved successfully'}
+AMBIENT_STATION_146
+MPPCB000298
+$CpZSONlzx&8
+f33b3243-f55d-4d83-8796-5118aa726fc6
+f33b3243-f55d-4d83-8796-5118aa726fc6
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+ID:  MPPCB000299
+Password:  @PhStyVogJ3R
+MPPCB IDDDDDDDDDDDDDDDDDDDDDDDDD MPPCB000299
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP @PhStyVogJ3R
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh <Response [200]>
+AMBIENT_STATION_147
+201
+{'message': 'Real-time data saved successfully'}
+AMBIENT_STATION_147
+MPPCB000299
+@PhStyVogJ3R
+82b5fe07-7e8d-46d0-8ae5-043cf88a9a91
+82b5fe07-7e8d-46d0-8ae5-043cf88a9a91
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+ID:  MPPCB000300
+Password:  Q8Tb0R#374EY
+MPPCB IDDDDDDDDDDDDDDDDDDDDDDDDD MPPCB000300
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP Q8Tb0R#374EY
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh <Response [200]>
+AMBIENT_STATION_148
+201
+{'message': 'Real-time data saved successfully'}
+AMBIENT_STATION_148
+MPPCB000300
+Q8Tb0R#374EY
+2cdc6efd-be2f-40ef-8319-275d30fe9364
+2cdc6efd-be2f-40ef-8319-275d30fe9364
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+ID:  MPPCB000301
+Password:  jIk2AJl@zjQd
+MPPCB IDDDDDDDDDDDDDDDDDDDDDDDDD MPPCB000301
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP jIk2AJl@zjQd
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh <Response [200]>
+AMBIENT_STATION_149
+201
+{'message': 'Real-time data saved successfully'}
+AMBIENT_STATION_149
+MPPCB000301
+jIk2AJl@zjQd
+78ab94c3-c5aa-4628-a5c7-f467b32a332f
+78ab94c3-c5aa-4628-a5c7-f467b32a332f
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+ID:  MPPCB000302
+Password:  Z&ke7RBNwSEC
+MPPCB IDDDDDDDDDDDDDDDDDDDDDDDDD MPPCB000302
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP Z&ke7RBNwSEC
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh <Response [200]>
+AMBIENT_STATION_150
+502
+Traceback (most recent call last):
+  File "/home/sibaram/.local/lib/python3.11/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sibaram/Downloads/client_side/create_esc.py", line 469, in <module>
+    print(response.json())
+          ^^^^^^^^^^^^^^^
+  File "/home/sibaram/.local/lib/python3.11/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+ID:  MPPCB000303
+Password:  HGNCJ@oyKH9e
+MPPCB IDDDDDDDDDDDDDDDDDDDDDDDDD MPPCB000303
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP HGNCJ@oyKH9e
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh <Response [200]>
+AMBIENT_STATION_151
+201
+{'message': 'Real-time data saved successfully'}
+AMBIENT_STATION_151
+MPPCB000303
+HGNCJ@oyKH9e
+1dceceb7-8938-4357-b52d-a0626182e7d5
+1dceceb7-8938-4357-b52d-a0626182e7d5
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+ID:  MPPCB000304
+Password:  5qU$n6MOJrcd
+MPPCB IDDDDDDDDDDDDDDDDDDDDDDDDD MPPCB000304
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP 5qU$n6MOJrcd
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh <Response [200]>
+AMBIENT_STATION_152
+Error fetching NTP time: No response received from pool.ntp.org.
+201
+{'message': 'Real-time data saved successfully'}
+AMBIENT_STATION_152
+MPPCB000304
+5qU$n6MOJrcd
+5db41d04-6844-4308-99b1-4d12fc66b835
+5db41d04-6844-4308-99b1-4d12fc66b835
+/home/sibaram/Downloads/client_side/run_script.sh: line 4: pip: command not found
+ID:  MPPCB000305
+Password:  R44&154pifAn
+MPPCB IDDDDDDDDDDDDDDDDDDDDDDDDD MPPCB000305
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP R44&154pifAn
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh <Response [200]>
+AMBIENT_STATION_153
+201
+{'message': 'Real-time data saved successfully'}
+AMBIENT_STATION_153
+MPPCB000305
+R44&154pifAn
+36a4d317-582d-4b30-b176-9a0e623770d4
+36a4d317-582d-4b30-b176-9a0e623770d4
