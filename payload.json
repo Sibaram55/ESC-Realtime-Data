@@ -1,51 +1,51 @@
 [
   {
-    "station_id": "AMBIENT_STATION_124",
+    "station_id": "AMBIENT_STATION_149",
     "station_type": "ambient",
     "parameter": [
       {
-        "parameter_name": "NH3",
+        "parameter_name": "O3 (Ozone)",
         "unit": "\u00b5g/m\u00b3",
-        "value": 579.16,
+        "value": 173.46,
         "analyzer_status": "active"
       },
       {
         "parameter_name": "Sulphur Dioxide",
         "unit": "\u00b5g/m\u00b3",
-        "value": 37.37,
+        "value": 821.97,
         "analyzer_status": "active"
       },
       {
-        "parameter_name": "PM 10",
+        "parameter_name": "NH3",
         "unit": "\u00b5g/m\u00b3",
-        "value": 115.25,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Nitrogen Dioxide",
-        "unit": "\u00b5g/m\u00b3",
-        "value": 945.47,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "PM 2.5",
-        "unit": "\u00b5g/m\u00b3",
-        "value": 357.3,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "O3 (Ozone)",
-        "unit": "\u00b5g/m\u00b3",
-        "value": 320.66,
+        "value": 919.26,
         "analyzer_status": "active"
       },
       {
         "parameter_name": "CO",
         "unit": "mg/m\u00b3",
-        "value": 728.85,
+        "value": 202.34,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "PM 10",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 45.83,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "Nitrogen Dioxide",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 500.18,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "PM 2.5",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 794.29,
         "analyzer_status": "active"
       }
     ],
-    "timestamp": "2025-01-20T10:44:08Z"
+    "timestamp": "2025-01-20T10:46:48Z"
   }
 ]
