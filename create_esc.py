@@ -16,6 +16,9 @@ import ntplib
 from dotenv import load_dotenv, set_key
 import os
 from datetime import datetime, timezone
+import urllib3
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 faker = Faker()
 
