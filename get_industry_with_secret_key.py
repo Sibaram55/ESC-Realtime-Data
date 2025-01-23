@@ -27,7 +27,7 @@ def connect_to_db():
         JOIN public."Industry_Data_parameterrealtimedata" param
         ON sensor.id=param.analyzer_id
         GROUP BY industry.mppcb_id, ambient.Id
-        HAVING COUNT(industry.mppcb_id) % 7 = 0 
+        HAVING COUNT(industry.mppcb_id) % 7 = 0
         AND industry.secret_key IS NOT NULL
         ORDER BY industry.mppcb_id DESC
         """
