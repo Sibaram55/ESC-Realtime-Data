@@ -104,7 +104,7 @@ def load_data_from_json(file_path):
         return json.load(f)
 
 # Function to execute the script for a given mppcb_id and password
-def run_script_for_row(mppcb_id, password, secret_key, ambient_id):
+def run_script_for_row(mppcb_id, password, secret_key, ambient_id, emission_id, effluent_id):
     set_key('.env', "SECRET_KEY", secret_key)
     print(secret_key)
     # Step 1: Login
@@ -130,7 +130,7 @@ def run_script_for_row(mppcb_id, password, secret_key, ambient_id):
         'Authorization': 'Bearer ' + access_token
     }
 
-    parameters = {
+    ambient_parameters = {
         "PM 2.5": "µg/m³",
         "PM 10": "µg/m³",
         "CO": "mg/m³",
@@ -140,16 +140,16 @@ def run_script_for_row(mppcb_id, password, secret_key, ambient_id):
         "Sulphur Dioxide": "µg/m³"
     }
     
-    param_list = list(parameters.items())
+    ambient_param_list = list(ambient_parameters.items())
     random.shuffle(param_list)
 
-    k0, v0 = param_list[0]
-    k1, v1 = param_list[1]
-    k2, v2 = param_list[2]
-    k3, v3 = param_list[3]
-    k4, v4 = param_list[4]
-    k5, v5 = param_list[5]
-    k6, v6 = param_list[6]
+    k0, v0 = ambient_param_list[0]
+    k1, v1 = ambient_param_list[1]
+    k2, v2 = ambient_param_list[2]
+    k3, v3 = ambient_param_list[3]
+    k4, v4 = ambient_param_list[4]
+    k5, v5 = ambient_param_list[5]
+    k6, v6 = ambient_param_list[6]
 
     payload = load_data_from_json('payload.json')
 
@@ -177,12 +177,28 @@ def run_script_for_row(mppcb_id, password, secret_key, ambient_id):
     payload[0]['parameter'][6]['value'] = generate_random_val()
     payload[0]['timestamp'] = get_timestamp()
 
+    emission_parameters = {
+        "PM 2.5": "µg/m³",
+        "PM 10": "µg/m³",
+        "CO": "mg/m³",
+        "NH3": "µg/m³",
+        "O3 (Ozone)": "µg/m³",
+        "Nitrogen Dioxide": "µg/m³",
+        "Sulphur Dioxide": "µg/m³"
+    }
+    
+    emission_param_list = list(emission_parameters.items())
+    random.shuffle(emission_param_list)
+    
+    payload[1]['station_id'] = emission_id
+    payload[1]['parameter'][0]['parameter_name'] = 
+
     with open('payload.json', 'w') as f:
         json.dump(payload, f, indent=2)
 
     API_URL = os.getenv("API_URL")
     data_json = json.dumps(payload)
-
+    
     with open('payload.json', 'r') as f:
         data = json.load(f)
     curr_timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
