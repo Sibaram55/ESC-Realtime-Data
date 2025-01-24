@@ -141,7 +141,7 @@ def run_script_for_row(mppcb_id, password, secret_key, ambient_id, emission_id, 
     }
     
     ambient_param_list = list(ambient_parameters.items())
-    random.shuffle(param_list)
+    random.shuffle(ambient_param_list)
 
     k0, v0 = ambient_param_list[0]
     k1, v1 = ambient_param_list[1]
@@ -189,9 +189,83 @@ def run_script_for_row(mppcb_id, password, secret_key, ambient_id, emission_id, 
     
     emission_param_list = list(emission_parameters.items())
     random.shuffle(emission_param_list)
+
+    k0, v0 = emission_param_list[0]
+    k1, v1 = emission_param_list[1]
+    k2, v2 = emission_param_list[2]
+    k3, v3 = emission_param_list[3]
+    k4, v4 = emission_param_list[4]
+    k5, v5 = emission_param_list[5]
+    k6, v6 = emission_param_list[6]
     
     payload[1]['station_id'] = emission_id
-    payload[1]['parameter'][0]['parameter_name'] = 
+    payload[1]['parameter'][0]['parameter_name'] = k0
+    payload[1]['parameter'][0]['unit'] = v0
+    payload[1]['parameter'][0]['value'] = generate_random_val()
+    payload[1]['parameter'][1]['parameter_name'] = k1
+    payload[1]['parameter'][1]['unit'] = v1
+    payload[1]['parameter'][1]['value'] = generate_random_val()
+    payload[1]['parameter'][2]['parameter_name'] = k2
+    payload[1]['parameter'][2]['unit'] = v2
+    payload[1]['parameter'][2]['value'] = generate_random_val()
+    payload[1]['parameter'][3]['parameter_name'] = k3
+    payload[1]['parameter'][3]['unit'] = v3
+    payload[1]['parameter'][3]['value'] = generate_random_val()
+    payload[1]['parameter'][4]['parameter_name'] = k4
+    payload[1]['parameter'][4]['unit'] = v4
+    payload[1]['parameter'][4]['value'] = generate_random_val()
+    payload[1]['parameter'][5]['parameter_name'] = k5
+    payload[1]['parameter'][5]['unit'] = v5
+    payload[1]['parameter'][5]['value'] = generate_random_val()
+    payload[1]['parameter'][6]['parameter_name'] = k6
+    payload[1]['parameter'][6]['unit'] = v6
+    payload[1]['parameter'][6]['value'] = generate_random_val()
+    payload[1]['timestamp'] = get_timestamp()
+
+    effluent_params = {
+        "PM 2.5": "µg/m³",
+        "PM 10": "µg/m³",
+        "CO": "mg/m³",
+        "NH3": "µg/m³",
+        "O3 (Ozone)": "µg/m³",
+        "Nitrogen Dioxide": "µg/m³",
+        "Sulphur Dioxide": "µg/m³"
+    }
+    
+    effluent_params_list = list(effluent_params.items())
+    random.shuffle(effluent_params_list)
+
+    k0, v0 = effluent_params_list[0]
+    k1, v1 = effluent_params_list[1]
+    k2, v2 = effluent_params_list[2]
+    k3, v3 = effluent_params_list[3]
+    k4, v4 = effluent_params_list[4]
+    k5, v5 = effluent_params_list[5]
+    k6, v6 = effluent_params_list[6]
+    
+    payload[2]['station_id'] = effluent_id
+    payload[2]['parameter'][0]['parameter_name'] = k0
+    payload[2]['parameter'][0]['unit'] = v0
+    payload[2]['parameter'][0]['value'] = generate_random_val()
+    payload[2]['parameter'][1]['parameter_name'] = k1
+    payload[2]['parameter'][1]['unit'] = v1
+    payload[2]['parameter'][1]['value'] = generate_random_val()
+    payload[2]['parameter'][2]['parameter_name'] = k2
+    payload[2]['parameter'][2]['unit'] = v2
+    payload[2]['parameter'][2]['value'] = generate_random_val()
+    payload[2]['parameter'][3]['parameter_name'] = k3
+    payload[2]['parameter'][3]['unit'] = v3
+    payload[2]['parameter'][3]['value'] = generate_random_val()
+    payload[2]['parameter'][4]['parameter_name'] = k4
+    payload[2]['parameter'][4]['unit'] = v4
+    payload[2]['parameter'][4]['value'] = generate_random_val()
+    payload[2]['parameter'][5]['parameter_name'] = k5
+    payload[2]['parameter'][5]['unit'] = v5
+    payload[2]['parameter'][5]['value'] = generate_random_val()
+    payload[2]['parameter'][6]['parameter_name'] = k6
+    payload[2]['parameter'][6]['unit'] = v6
+    payload[2]['parameter'][6]['value'] = generate_random_val()
+    payload[2]['timestamp'] = get_timestamp()
 
     with open('payload.json', 'w') as f:
         json.dump(payload, f, indent=2)
@@ -239,6 +313,8 @@ for index, row in df.iterrows():
     password = row['password']
     secret_k = row['secret_key']
     ambient_id = row['ambient_id']
+    emission_id = row['emission_id']
+    effluent_id = row['effluent_id']
     
     # Run the script for each row
-    run_script_for_row(mppcb_id, password, secret_k, ambient_id)
+    run_script_for_row(mppcb_id, password, secret_k, ambient_id, emission_id, effluent_id)

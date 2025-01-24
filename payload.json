@@ -1,371 +1,149 @@
 [
   {
-    "station_id": "AMBIENT_STATION_130",
+    "station_id": "AMBIENT_STATION_163",
     "station_type": "ambient",
     "parameter": [
       {
+        "parameter_name": "NH3",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 66.57,
+        "analyzer_status": "active"
+      },
+      {
         "parameter_name": "O3 (Ozone)",
         "unit": "\u00b5g/m\u00b3",
-        "value": 100.42,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "PM 10",
-        "unit": "\u00b5g/m\u00b3",
-        "value": 853.49,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "PM 2.5",
-        "unit": "\u00b5g/m\u00b3",
-        "value": 118.68,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Sulphur Dioxide",
-        "unit": "\u00b5g/m\u00b3",
-        "value": 160.12,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "CO",
-        "unit": "mg/m\u00b3",
-        "value": 985.51,
+        "value": 308.77,
         "analyzer_status": "active"
       },
       {
         "parameter_name": "Nitrogen Dioxide",
         "unit": "\u00b5g/m\u00b3",
-        "value": 98.27,
-        "analyzer_status": "active"
+        "value": 630.83,
+        "analyzer_status": "delay"
       },
       {
-        "parameter_name": "NH3",
+        "parameter_name": "PM 10",
         "unit": "\u00b5g/m\u00b3",
-        "value": 843.42,
-        "analyzer_status": "active"
+        "value": 923.35,
+        "analyzer_status": "delay"
+      },
+      {
+        "parameter_name": "Sulphur Dioxide",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 930.87,
+        "analyzer_status": "inactive"
+      },
+      {
+        "parameter_name": "CO",
+        "unit": "mg/m\u00b3",
+        "value": 194.36,
+        "analyzer_status": "partial_active"
+      },
+      {
+        "parameter_name": "PM 2.5",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 944.72,
+        "analyzer_status": "partial_active"
       }
     ],
-    "timestamp": "2025-01-23T09:05:32Z"
+    "timestamp": "2025-01-24T06:01:15Z"
   },
   {
-    "station_id": "EMISSION_STATION_130",
+    "station_id": "EMISSION_STATION_23",
     "station_type": "emission",
     "parameter": [
       {
-        "parameter_name": "O3 (Ozone)",
-        "unit": "\u00b5g/m\u00b3",
-        "value": 100.42,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "PM 10",
-        "unit": "\u00b5g/m\u00b3",
-        "value": 853.49,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "PM 2.5",
-        "unit": "\u00b5g/m\u00b3",
-        "value": 118.68,
-        "analyzer_status": "active"
-      },
-      {
         "parameter_name": "Sulphur Dioxide",
         "unit": "\u00b5g/m\u00b3",
-        "value": 160.12,
+        "value": 445.26,
         "analyzer_status": "active"
       },
       {
         "parameter_name": "CO",
         "unit": "mg/m\u00b3",
-        "value": 985.51,
+        "value": 699.27,
         "analyzer_status": "active"
       },
       {
         "parameter_name": "Nitrogen Dioxide",
         "unit": "\u00b5g/m\u00b3",
-        "value": 98.27,
-        "analyzer_status": "active"
+        "value": 473.78,
+        "analyzer_status": "delay"
+      },
+      {
+        "parameter_name": "PM 10",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 1.65,
+        "analyzer_status": "delay"
+      },
+      {
+        "parameter_name": "O3 (Ozone)",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 628.18,
+        "analyzer_status": "inactive"
       },
       {
         "parameter_name": "NH3",
         "unit": "\u00b5g/m\u00b3",
-        "value": 843.42,
-        "analyzer_status": "active"
+        "value": 915.99,
+        "analyzer_status": "partial_active"
+      },
+      {
+        "parameter_name": "PM 2.5",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 490.7,
+        "analyzer_status": "partial_active"
       }
     ],
-    "timestamp": "2025-01-20T12:31:07Z"
+    "timestamp": "2025-01-24T06:01:15Z"
   },
   {
-    "station_id": "EFFLUENT_STATION_130",
+    "station_id": "EFFLUENT_STATION_23",
     "station_type": "effluent",
     "parameter": [
       {
-        "parameter_name": "Colour",
-        "unit": "Hazen units",
-        "value": null,
+        "parameter_name": "CO",
+        "unit": "mg/m\u00b3",
+        "value": 541.91,
         "analyzer_status": "active"
       },
       {
-        "parameter_name": "Odour",
-        "unit": "-",
-        "value": null,
+        "parameter_name": "PM 2.5",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 868.47,
         "analyzer_status": "active"
       },
       {
-        "parameter_name": "pH value",
-        "unit": "-",
-        "value": null,
-        "analyzer_status": "active"
+        "parameter_name": "PM 10",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 389.7,
+        "analyzer_status": "delay"
       },
       {
-        "parameter_name": "Conductivity (EC)",
-        "unit": "\u00b5 mho/cm or mmho/cm",
-        "value": null,
-        "analyzer_status": "active"
+        "parameter_name": "Sulphur Dioxide",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 449.95,
+        "analyzer_status": "delay"
       },
       {
-        "parameter_name": "Turbidity",
-        "unit": "NTU",
-        "value": null,
-        "analyzer_status": "active"
+        "parameter_name": "Nitrogen Dioxide",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 247.66,
+        "analyzer_status": "inactive"
       },
       {
-        "parameter_name": "Phenolpthalein Alkalinity",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
+        "parameter_name": "NH3",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 552.32,
+        "analyzer_status": "partial_active"
       },
       {
-        "parameter_name": "Total Alkalinity",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Ammonia",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Boron",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Calcium",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Chloride",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Fluoride",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Phosphorus",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Biological Oxygen Demand",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Chemical Oxygen",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Demand",
-        "unit": null,
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Potassium",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Sodium",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Total Solids",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Total Dissolve Solids",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Total Suspended Solids",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Fixed Dissolved Solids",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Volatile Solids",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Free residual chlorine",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Magnesium",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Nitrate",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Phenolic compounds",
-        "unit": "\u00b5g/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Sulphate",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Sulphide",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Total hardness",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Calcium hardness",
-        "unit": null,
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Magnesium hardness",
-        "unit": null,
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Total kjeldahl Nitrogen",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Oil and grease",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Hexavalent chromium",
-        "unit": "mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Metals (Multiple numbers)",
-        "unit": "\u00b5g/l or mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Pesticides (Multiple numbers)",
-        "unit": "\u00b5g/l or mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Polynuclear aromatic hydrocarbon (Multiple numbers)",
-        "unit": "\u00b5g/l or mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Trihalomethanes 1. Chloroform",
-        "unit": "\u00b5g/l or mg/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Anionic detergents (as MBAS)",
-        "unit": "mg MBAS/l",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "E. Coli",
-        "unit": "MPN/100 ml",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Total coliform",
-        "unit": "MPN/100 ml",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Fecal coliform",
-        "unit": "MPN/100 ml",
-        "value": null,
-        "analyzer_status": "active"
-      },
-      {
-        "parameter_name": "Streptococci",
-        "unit": "MPN/100 ml",
-        "value": null,
-        "analyzer_status": "active"
+        "parameter_name": "O3 (Ozone)",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 585.58,
+        "analyzer_status": "partial_active"
       }
     ],
-    "timestamp": "2025-01-20T12:31:07Z"
+    "timestamp": "2025-01-24T06:01:15Z"
   }
 ]
