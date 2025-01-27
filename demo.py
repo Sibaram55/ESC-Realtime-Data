@@ -107,28 +107,6 @@ def load_data_from_json(file_path):
 def run_script_for_row(mppcb_id, password, secret_key, ambient_id, emission_id, effluent_id):
     set_key('.env', "SECRET_KEY", secret_key)
     print(secret_key)
-    # # Step 1: Login
-    # login_payload = {
-    #     "mppcb_id": mppcb_id, 
-    #     "password": password
-    # }
-    # url = BASE_URL + LOGIN_ENDPOINT
-    # response = requests.post(url=url, data=login_payload, verify=False)
-
-    # # Step 2: Validate OTP
-    # validate_otp_payload = {
-    #     "mppcb_id": mppcb_id, 
-    #     "otp_code": 123456
-    # }
-    # url = BASE_URL + VERIFY_OTP_ENDPOINT
-    # response = requests.post(url=url, verify=False, data=validate_otp_payload)
-
-    # refresh_token = response.json()['data']['refresh']
-    # access_token = response.json()['data']['access']
-
-    # headers = {
-    #     'Authorization': 'Bearer ' + access_token
-    # }
 
     ambient_parameters = {
         "PM 2.5": "µg/m³",
@@ -301,13 +279,10 @@ def run_script_for_row(mppcb_id, password, secret_key, ambient_id, emission_id, 
 
     response = requests.post(API_URL, json=payload, headers=headers, verify=False)
 
-    # Print the response from the server
     print(mppcb_id)
     print(response.status_code)
     print(response.json())
     
-
-# Iterate over each row in the DataFrame and run the script
 for index, row in df.iterrows():
     mppcb_id = row['mppcb_id']
     password = row['password']
@@ -316,7 +291,7 @@ for index, row in df.iterrows():
     emission_id = row['emission_id']
     effluent_id = row['effluent_id']
 
+    print(ambient_id)
     print(emission_id)
-    
-    # Run the script for each row
+    print(effluent_id)
     run_script_for_row(mppcb_id, password, secret_k, ambient_id, emission_id, effluent_id)
