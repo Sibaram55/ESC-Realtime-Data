@@ -103,8 +103,8 @@ def load_data_from_json(file_path):
     with open(file_path, 'r') as f:
         return json.load(f)
 
-# Function to execute the script for a given mppcb_id and password
-def run_script_for_row(mppcb_id, password, secret_key, ambient_id, emission_id, effluent_id):
+# Function to execute the script for a given mppcb_id
+def run_script_for_row(mppcb_id, secret_key, ambient_id, emission_id, effluent_id):
     set_key('.env', "SECRET_KEY", secret_key)
     print(secret_key)
 
@@ -285,7 +285,6 @@ def run_script_for_row(mppcb_id, password, secret_key, ambient_id, emission_id, 
     
 for index, row in df.iterrows():
     mppcb_id = row['mppcb_id']
-    password = row['password']
     secret_k = row['secret_key']
     ambient_id = row['ambient_id']
     emission_id = row['emission_id']
@@ -294,4 +293,4 @@ for index, row in df.iterrows():
     print(ambient_id)
     print(emission_id)
     print(effluent_id)
-    run_script_for_row(mppcb_id, password, secret_k, ambient_id, emission_id, effluent_id)
+    run_script_for_row(mppcb_id, secret_k, ambient_id, emission_id, effluent_id)
