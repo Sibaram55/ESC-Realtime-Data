@@ -1,0 +1,98 @@
+  {
+    "station_id": "EMISSION_STATION_23",
+    "station_type": "emission",
+    "parameter": [
+      {
+        "parameter_name": "CO",
+        "unit": "mg/m\u00b3",
+        "value": 236.8,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "NH3",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 439.39,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "Sulphur Dioxide",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 691.26,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "Nitrogen Dioxide",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 538.79,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "PM 10",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 369.09,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "PM 2.5",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 158.27,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "O3 (Ozone)",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 5.56,
+        "analyzer_status": "active"
+      }
+    ],
+    "timestamp": "2025-01-24T06:32:56Z"
+  },
+  {
+    "station_id": "EFFLUENT_STATION_23",
+    "station_type": "effluent",
+    "parameter": [
+      {
+        "parameter_name": "PM 10",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 40.07,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "Nitrogen Dioxide",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 266.44,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "O3 (Ozone)",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 909.22,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "PM 2.5",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 433.15,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "CO",
+        "unit": "mg/m\u00b3",
+        "value": 808.11,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "NH3",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 645.1,
+        "analyzer_status": "active"
+      },
+      {
+        "parameter_name": "Sulphur Dioxide",
+        "unit": "\u00b5g/m\u00b3",
+        "value": 419.39,
+        "analyzer_status": "active"
+      }
+    ],
+"timestamp": "2025-01-24T06:32:56Z"
+}

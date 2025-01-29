@@ -33,7 +33,7 @@ POST_AMBIENT_DETAILS = "/esc_erc/AmbientDetails/"
 POST_SUBMIT = "/esc_erc/SubmitDetails/"
 
 # Read data from the CSV file
-df = pd.read_csv("esc_ids.csv")
+df = pd.read_csv("esc_ids_local.csv")
 
 # Function to generate email address
 def generate_email_address(fname, lname=None, domain='gmail.com'):
@@ -78,7 +78,7 @@ def get_timestamp():
         return None
 
 def generate_random_val():
-    return round(random.uniform(0.1, 1000), 2)
+    return round(random.uniform(2, 900), 2)
 
 # Function to encrypt data using AES
 def encrypt_data(data, secret_key):
