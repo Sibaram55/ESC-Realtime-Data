@@ -18,24 +18,19 @@ import pandas as pd
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# Initialize Faker
 faker = Faker()
 
-# Load environment variables
 load_dotenv()
 
-# API and Endpoint URLs
-BASE_URL = "https://mppcb-dev:9443/backend/v1"
+BASE_URL = "https://www.mppcb-keltron.com:9443/backend/v1"
 LOGIN_ENDPOINT = "/industry/industry_login/"
 VERIFY_OTP_ENDPOINT = "/industry/validate-login-otp/"
 POST_INDUSTRY_DETAILS = "/esc_erc/IndustryDetails/"
 POST_AMBIENT_DETAILS = "/esc_erc/AmbientDetails/"
 POST_SUBMIT = "/esc_erc/SubmitDetails/"
 
-# Read data from the CSV file
 df = pd.read_csv("esc_ids_local.csv")
 
-# Function to generate email address
 def generate_email_address(fname, lname=None, domain='gmail.com'):
     fname = fname.strip().lower()
     domain = domain.strip().lower()
@@ -46,27 +41,22 @@ def generate_email_address(fname, lname=None, domain='gmail.com'):
         email = f"{fname}@{domain}"
     return email
 
-# Function to generate mobile number
 def generate_mobile_number():
     first_digit = random.randint(6, 9)
     remaining_digits = ''.join(str(random.randint(0, 9)) for _ in range(9))
     return f"{first_digit}{remaining_digits}"
 
-# Function to generate a random station ID
 def generate_station_id():
     random_number = random.randint(30, 9999999)
     station_id = f"Ambient_Station_{random_number}"
     return station_id
 
-# Function to generate random latitude
 def generate_latitude():
     return round(random.uniform(-90, 90), 6)
 
-# Function to generate random longitude
 def generate_longitude():
     return round(random.uniform(-180, 180), 6)
 
-# Function to get timestamp from NTP
 def get_timestamp():
     try:
         ntp_client = ntplib.NTPClient()
@@ -80,14 +70,12 @@ def get_timestamp():
 def generate_random_val():
     return round(random.uniform(2, 900), 2)
 
-# Function to encrypt data using AES
 def encrypt_data(data, secret_key):
     key = hashlib.sha256(secret_key.encode()).digest()[:16]
     cipher = AES.new(key, AES.MODE_CBC, iv=key[:16])
     encrypted_data = cipher.encrypt(pad(data.encode(), AES.block_size))
     return base64.b64encode(encrypted_data).decode('utf-8')
 
-# Function to generate the signature
 def generate_signature(data, secret_key, timestamp):
     serialized_data = []
     for item in data:
@@ -103,7 +91,6 @@ def load_data_from_json(file_path):
     with open(file_path, 'r') as f:
         return json.load(f)
 
-# Function to execute the script for a given mppcb_id
 def run_script_for_row(mppcb_id, secret_key, ambient_id, emission_id, effluent_id):
     set_key('.env', "SECRET_KEY", secret_key)
     print(secret_key)
@@ -175,30 +162,56 @@ def run_script_for_row(mppcb_id, secret_key, ambient_id, emission_id, effluent_i
     k4, v4 = emission_param_list[4]
     k5, v5 = emission_param_list[5]
     k6, v6 = emission_param_list[6]
-    
-    payload[1]['station_id'] = emission_id
-    payload[1]['parameter'][0]['parameter_name'] = k0
-    payload[1]['parameter'][0]['unit'] = v0
-    payload[1]['parameter'][0]['value'] = generate_random_val()
-    payload[1]['parameter'][1]['parameter_name'] = k1
-    payload[1]['parameter'][1]['unit'] = v1
-    payload[1]['parameter'][1]['value'] = generate_random_val()
-    payload[1]['parameter'][2]['parameter_name'] = k2
-    payload[1]['parameter'][2]['unit'] = v2
-    payload[1]['parameter'][2]['value'] = generate_random_val()
-    payload[1]['parameter'][3]['parameter_name'] = k3
-    payload[1]['parameter'][3]['unit'] = v3
-    payload[1]['parameter'][3]['value'] = generate_random_val()
-    payload[1]['parameter'][4]['parameter_name'] = k4
-    payload[1]['parameter'][4]['unit'] = v4
-    payload[1]['parameter'][4]['value'] = generate_random_val()
-    payload[1]['parameter'][5]['parameter_name'] = k5
-    payload[1]['parameter'][5]['unit'] = v5
-    payload[1]['parameter'][5]['value'] = generate_random_val()
-    payload[1]['parameter'][6]['parameter_name'] = k6
-    payload[1]['parameter'][6]['unit'] = v6
-    payload[1]['parameter'][6]['value'] = generate_random_val()
-    payload[1]['timestamp'] = get_timestamp()
+
+    if emission_id != "EMISSION_STATION92":
+        payload[1]['station_id'] = emission_id
+        payload[1]['parameter'][0]['parameter_name'] = k0
+        payload[1]['parameter'][0]['unit'] = v0
+        payload[1]['parameter'][0]['value'] = generate_random_val()
+        payload[1]['parameter'][1]['parameter_name'] = k1
+        payload[1]['parameter'][1]['unit'] = v1
+        payload[1]['parameter'][1]['value'] = generate_random_val()
+        payload[1]['parameter'][2]['parameter_name'] = k2
+        payload[1]['parameter'][2]['unit'] = v2
+        payload[1]['parameter'][2]['value'] = generate_random_val()
+        payload[1]['parameter'][3]['parameter_name'] = k3
+        payload[1]['parameter'][3]['unit'] = v3
+        payload[1]['parameter'][3]['value'] = generate_random_val()
+        payload[1]['parameter'][4]['parameter_name'] = k4
+        payload[1]['parameter'][4]['unit'] = v4
+        payload[1]['parameter'][4]['value'] = generate_random_val()
+        payload[1]['parameter'][5]['parameter_name'] = k5
+        payload[1]['parameter'][5]['unit'] = v5
+        payload[1]['parameter'][5]['value'] = generate_random_val()
+        payload[1]['parameter'][6]['parameter_name'] = k6
+        payload[1]['parameter'][6]['unit'] = v6
+        payload[1]['parameter'][6]['value'] = generate_random_val()
+        payload[1]['timestamp'] = get_timestamp()
+    else:
+        payload[1]['station_id'] = emission_id
+        payload[1]['parameter'][0]['parameter_name'] = k0
+        payload[1]['parameter'][0]['unit'] = v0
+        payload[1]['parameter'][0]['value'] = generate_random_val()
+        payload[1]['parameter'][1]['parameter_name'] = k1
+        payload[1]['parameter'][1]['unit'] = v1
+        payload[1]['parameter'][1]['value'] = generate_random_val()
+        payload[1]['parameter'][2]['parameter_name'] = k2
+        payload[1]['parameter'][2]['unit'] = v2
+        payload[1]['parameter'][2]['value'] = generate_random_val()
+        payload[1]['parameter'][3]['parameter_name'] = k3
+        payload[1]['parameter'][3]['unit'] = v3
+        payload[1]['parameter'][3]['value'] = generate_random_val()
+        payload[1]['parameter'][4]['parameter_name'] = k4
+        payload[1]['parameter'][4]['unit'] = v4
+        payload[1]['parameter'][4]['value'] = generate_random_val()
+        payload[1]['parameter'][5]['parameter_name'] = k5
+        payload[1]['parameter'][5]['unit'] = v5
+        payload[1]['parameter'][5]['value'] = generate_random_val()
+        payload[1]['parameter'][6]['parameter_name'].pop()
+        payload[1]['parameter'][6]['unit'].pop()
+        payload[1]['parameter'][6]['value'].pop()
+        payload[1]['timestamp'] = get_timestamp()
+
 
     effluent_params = {
         "PM 2.5": "µg/m³",
