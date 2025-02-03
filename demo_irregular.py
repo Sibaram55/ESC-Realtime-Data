@@ -29,7 +29,7 @@ POST_INDUSTRY_DETAILS = "/esc_erc/IndustryDetails/"
 POST_AMBIENT_DETAILS = "/esc_erc/AmbientDetails/"
 POST_SUBMIT = "/esc_erc/SubmitDetails/"
 
-df = pd.read_csv("esc_ids_local.csv")
+df = pd.read_csv("esc_ids_irregular.csv")
 
 def generate_email_address(fname, lname=None, domain='gmail.com'):
     fname = fname.strip().lower()
@@ -95,52 +95,52 @@ def run_script_for_row(mppcb_id, secret_key, ambient_id, emission_id, effluent_i
     set_key('.env', "SECRET_KEY", secret_key)
     print(secret_key)
 
-    ambient_parameters = {
-        "PM 2.5": "µg/m³",
-        "PM 10": "µg/m³",
-        "CO": "mg/m³",
-        "NH3": "µg/m³",
-        "O3 (Ozone)": "µg/m³",
-        "Nitrogen Dioxide": "µg/m³",
-        "Sulphur Dioxide": "µg/m³"
-    }
+    # ambient_parameters = {
+    #     "PM 2.5": "µg/m³",
+    #     "PM 10": "µg/m³",
+    #     "CO": "mg/m³",
+    #     "NH3": "µg/m³",
+    #     "O3 (Ozone)": "µg/m³",
+    #     "Nitrogen Dioxide": "µg/m³",
+    #     "Sulphur Dioxide": "µg/m³"
+    # }
     
-    ambient_param_list = list(ambient_parameters.items())
-    random.shuffle(ambient_param_list)
+    # ambient_param_list = list(ambient_parameters.items())
+    # random.shuffle(ambient_param_list)
 
-    k0, v0 = ambient_param_list[0]
-    k1, v1 = ambient_param_list[1]
-    k2, v2 = ambient_param_list[2]
-    k3, v3 = ambient_param_list[3]
-    k4, v4 = ambient_param_list[4]
-    k5, v5 = ambient_param_list[5]
-    k6, v6 = ambient_param_list[6]
+    # k0, v0 = ambient_param_list[0]
+    # k1, v1 = ambient_param_list[1]
+    # k2, v2 = ambient_param_list[2]
+    # k3, v3 = ambient_param_list[3]
+    # k4, v4 = ambient_param_list[4]
+    # k5, v5 = ambient_param_list[5]
+    # k6, v6 = ambient_param_list[6]
 
-    payload = load_data_from_json('payload.json')
+    payload = load_data_from_json('payload-irregular.json.json')
 
-    payload[0]['station_id'] = ambient_id
-    payload[0]['parameter'][0]['parameter_name'] = k0
-    payload[0]['parameter'][0]['unit'] = v0
-    payload[0]['parameter'][0]['value'] = generate_random_val()
-    payload[0]['parameter'][1]['parameter_name'] = k1
-    payload[0]['parameter'][1]['unit'] = v1
-    payload[0]['parameter'][1]['value'] = generate_random_val()
-    payload[0]['parameter'][2]['parameter_name'] = k2
-    payload[0]['parameter'][2]['unit'] = v2
-    payload[0]['parameter'][2]['value'] = generate_random_val()
-    payload[0]['parameter'][3]['parameter_name'] = k3
-    payload[0]['parameter'][3]['unit'] = v3
-    payload[0]['parameter'][3]['value'] = generate_random_val()
-    payload[0]['parameter'][4]['parameter_name'] = k4
-    payload[0]['parameter'][4]['unit'] = v4
-    payload[0]['parameter'][4]['value'] = generate_random_val()
-    payload[0]['parameter'][5]['parameter_name'] = k5
-    payload[0]['parameter'][5]['unit'] = v5
-    payload[0]['parameter'][5]['value'] = generate_random_val()
-    payload[0]['parameter'][6]['parameter_name'] = k6
-    payload[0]['parameter'][6]['unit'] = v6
-    payload[0]['parameter'][6]['value'] = generate_random_val()
-    payload[0]['timestamp'] = get_timestamp()
+    # payload[0]['station_id'] = ambient_id
+    # payload[0]['parameter'][0]['parameter_name'] = k0
+    # payload[0]['parameter'][0]['unit'] = v0
+    # payload[0]['parameter'][0]['value'] = generate_random_val()
+    # payload[0]['parameter'][1]['parameter_name'] = k1
+    # payload[0]['parameter'][1]['unit'] = v1
+    # payload[0]['parameter'][1]['value'] = generate_random_val()
+    # payload[0]['parameter'][2]['parameter_name'] = k2
+    # payload[0]['parameter'][2]['unit'] = v2
+    # payload[0]['parameter'][2]['value'] = generate_random_val()
+    # payload[0]['parameter'][3]['parameter_name'] = k3
+    # payload[0]['parameter'][3]['unit'] = v3
+    # payload[0]['parameter'][3]['value'] = generate_random_val()
+    # payload[0]['parameter'][4]['parameter_name'] = k4
+    # payload[0]['parameter'][4]['unit'] = v4
+    # payload[0]['parameter'][4]['value'] = generate_random_val()
+    # payload[0]['parameter'][5]['parameter_name'] = k5
+    # payload[0]['parameter'][5]['unit'] = v5
+    # payload[0]['parameter'][5]['value'] = generate_random_val()
+    # payload[0]['parameter'][6]['parameter_name'] = k6
+    # payload[0]['parameter'][6]['unit'] = v6
+    # payload[0]['parameter'][6]['value'] = generate_random_val()
+    # payload[0]['timestamp'] = get_timestamp()
 
     emission_parameters = {
         "PM 2.5": "µg/m³",
