@@ -29,7 +29,7 @@ POST_INDUSTRY_DETAILS = "/esc_erc/IndustryDetails/"
 POST_AMBIENT_DETAILS = "/esc_erc/AmbientDetails/"
 POST_SUBMIT = "/esc_erc/SubmitDetails/"
 
-df = pd.read_csv("esc_ids_local.csv")
+df = pd.read_csv("/home/shyena/ESC-Parameter-Data/ESC-Realtime-Data/esc_ids_local.csv")
 
 def generate_email_address(fname, lname=None, domain='gmail.com'):
     fname = fname.strip().lower()
@@ -116,7 +116,7 @@ def run_script_for_row(mppcb_id, secret_key, ambient_id, emission_id, effluent_i
     k5, v5 = ambient_param_list[5]
     k6, v6 = ambient_param_list[6]
 
-    payload = load_data_from_json('payload.json')
+    payload = load_data_from_json('/home/shyena/ESC-Parameter-Data/ESC-Realtime-Data/payload.json')
 
     payload[0]['station_id'] = ambient_id
     payload[0]['parameter'][0]['parameter_name'] = k0

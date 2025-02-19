@@ -29,7 +29,7 @@ POST_INDUSTRY_DETAILS = "/esc_erc/IndustryDetails/"
 POST_AMBIENT_DETAILS = "/esc_erc/AmbientDetails/"
 POST_SUBMIT = "/esc_erc/SubmitDetails/"
 
-df = pd.read_csv("esc_ids_irregular.csv")
+df = pd.read_csv("/home/shyena/ESC-Parameter-Data/ESC-Realtime-Data/esc_ids_irregular.csv")
 
 def generate_email_address(fname, lname=None, domain='gmail.com'):
     fname = fname.strip().lower()
@@ -116,7 +116,7 @@ def run_script_for_row(mppcb_id, secret_key, ambient_id, emission_id, effluent_i
     # k5, v5 = ambient_param_list[5]
     # k6, v6 = ambient_param_list[6]
 
-    payload = load_data_from_json('payload-irregular.json.json')
+    payload = load_data_from_json('/home/shyena/ESC-Parameter-Data/ESC-Realtime-Data/payload-irregular.json')
 
     # payload[0]['station_id'] = ambient_id
     # payload[0]['parameter'][0]['parameter_name'] = k0
@@ -163,7 +163,52 @@ def run_script_for_row(mppcb_id, secret_key, ambient_id, emission_id, effluent_i
     k5, v5 = emission_param_list[5]
     k6, v6 = emission_param_list[6]
 
-    payload[1]['station_id'] = emission_id
+    payload[0]['station_id'] = emission_id
+    payload[0]['parameter'][0]['parameter_name'] = k0
+    payload[0]['parameter'][0]['unit'] = v0
+    payload[0]['parameter'][0]['value'] = generate_random_val()
+    payload[0]['parameter'][1]['parameter_name'] = k1
+    payload[0]['parameter'][1]['unit'] = v1
+    payload[0]['parameter'][1]['value'] = generate_random_val()
+    payload[0]['parameter'][2]['parameter_name'] = k2
+    payload[0]['parameter'][2]['unit'] = v2
+    payload[0]['parameter'][2]['value'] = generate_random_val()
+    payload[0]['parameter'][3]['parameter_name'] = k3
+    payload[0]['parameter'][3]['unit'] = v3
+    payload[0]['parameter'][3]['value'] = generate_random_val()
+    payload[0]['parameter'][4]['parameter_name'] = k4
+    payload[0]['parameter'][4]['unit'] = v4
+    payload[0]['parameter'][4]['value'] = generate_random_val()
+    payload[0]['parameter'][5]['parameter_name'] = k5
+    payload[0]['parameter'][5]['unit'] = v5
+    payload[0]['parameter'][5]['value'] = generate_random_val()
+    payload[0]['parameter'][6]['parameter_name'] = k6
+    payload[0]['parameter'][6]['unit'] = v6
+    payload[0]['parameter'][6]['value'] = generate_random_val()
+    payload[0]['timestamp'] = get_timestamp()
+
+    effluent_params = {
+        "PM 2.5": "µg/m³",
+        "PM 10": "µg/m³",
+        "CO": "mg/m³",
+        "NH3": "µg/m³",
+        "O3 (Ozone)": "µg/m³",
+        "Nitrogen Dioxide": "µg/m³",
+        "Sulphur Dioxide": "µg/m³"
+    }
+    
+    effluent_params_list = list(effluent_params.items())
+    random.shuffle(effluent_params_list)
+
+    k0, v0 = effluent_params_list[0]
+    k1, v1 = effluent_params_list[1]
+    k2, v2 = effluent_params_list[2]
+    k3, v3 = effluent_params_list[3]
+    k4, v4 = effluent_params_list[4]
+    k5, v5 = effluent_params_list[5]
+    k6, v6 = effluent_params_list[6]
+    
+    payload[1]['station_id'] = effluent_id
     payload[1]['parameter'][0]['parameter_name'] = k0
     payload[1]['parameter'][0]['unit'] = v0
     payload[1]['parameter'][0]['value'] = generate_random_val()
@@ -187,58 +232,13 @@ def run_script_for_row(mppcb_id, secret_key, ambient_id, emission_id, effluent_i
     payload[1]['parameter'][6]['value'] = generate_random_val()
     payload[1]['timestamp'] = get_timestamp()
 
-    effluent_params = {
-        "PM 2.5": "µg/m³",
-        "PM 10": "µg/m³",
-        "CO": "mg/m³",
-        "NH3": "µg/m³",
-        "O3 (Ozone)": "µg/m³",
-        "Nitrogen Dioxide": "µg/m³",
-        "Sulphur Dioxide": "µg/m³"
-    }
-    
-    effluent_params_list = list(effluent_params.items())
-    random.shuffle(effluent_params_list)
-
-    k0, v0 = effluent_params_list[0]
-    k1, v1 = effluent_params_list[1]
-    k2, v2 = effluent_params_list[2]
-    k3, v3 = effluent_params_list[3]
-    k4, v4 = effluent_params_list[4]
-    k5, v5 = effluent_params_list[5]
-    k6, v6 = effluent_params_list[6]
-    
-    payload[2]['station_id'] = effluent_id
-    payload[2]['parameter'][0]['parameter_name'] = k0
-    payload[2]['parameter'][0]['unit'] = v0
-    payload[2]['parameter'][0]['value'] = generate_random_val()
-    payload[2]['parameter'][1]['parameter_name'] = k1
-    payload[2]['parameter'][1]['unit'] = v1
-    payload[2]['parameter'][1]['value'] = generate_random_val()
-    payload[2]['parameter'][2]['parameter_name'] = k2
-    payload[2]['parameter'][2]['unit'] = v2
-    payload[2]['parameter'][2]['value'] = generate_random_val()
-    payload[2]['parameter'][3]['parameter_name'] = k3
-    payload[2]['parameter'][3]['unit'] = v3
-    payload[2]['parameter'][3]['value'] = generate_random_val()
-    payload[2]['parameter'][4]['parameter_name'] = k4
-    payload[2]['parameter'][4]['unit'] = v4
-    payload[2]['parameter'][4]['value'] = generate_random_val()
-    payload[2]['parameter'][5]['parameter_name'] = k5
-    payload[2]['parameter'][5]['unit'] = v5
-    payload[2]['parameter'][5]['value'] = generate_random_val()
-    payload[2]['parameter'][6]['parameter_name'] = k6
-    payload[2]['parameter'][6]['unit'] = v6
-    payload[2]['parameter'][6]['value'] = generate_random_val()
-    payload[2]['timestamp'] = get_timestamp()
-
-    with open('payload.json', 'w') as f:
+    with open('/home/shyena/ESC-Parameter-Data/ESC-Realtime-Data/payload-irregular.json', 'w') as f:
         json.dump(payload, f, indent=2)
 
     API_URL = os.getenv("API_URL")
     data_json = json.dumps(payload)
     
-    with open('payload.json', 'r') as f:
+    with open('/home/shyena/ESC-Parameter-Data/ESC-Realtime-Data/payload-irregular.json', 'r') as f:
         data = json.load(f)
     curr_timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
